@@ -29,7 +29,7 @@ If you are a contributor please run npm i to install all dependencies.
 
 ![note page](./public/assets/images/notepage.png)
 
-Deployed Heroku link
+[Deployed Heroku Link](https://no-faking-note-taking.herokuapp.com/)
 
 ## Technology
 
