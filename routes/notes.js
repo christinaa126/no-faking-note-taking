@@ -13,14 +13,14 @@ notes.get("/", (req, res) => {
 
 // POST Route to submit notes
 notes.post("/", (req, res) => {
-  // Destructuring items in req.body
-  const { noteTitle, noteText } = req.body;
+  // Destructure
+  const { title, text } = req.body;
 
-  if (noteTitle && noteText) {
+  if (title && text) {
     const newNote = {
-      noteTitle,
-      noteText,
-      note_id: uuidv4(),
+      title,
+      text,
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, "./db/db.json");
@@ -32,7 +32,7 @@ notes.post("/", (req, res) => {
 
     res.json(response);
   } else {
-    res.json("Error in posting note");
+    res.json("Error posting note");
   }
 });
 
